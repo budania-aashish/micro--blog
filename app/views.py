@@ -6,4 +6,17 @@ from flask import render_template
 @application.route('/index')
 def index():
     user = {'nickname': 'Aashish Budania'}
-    return render_template('index.html', title='Home', user=user)
+    # fake posts
+    posts = [
+        {
+            "author": "Aashish Budania",
+            "subject": "Maths",
+            "level": "Primary"
+        },
+        {
+            "author": "APJ abdul",
+            "subject": "Wings of fire",
+            "level": "Advanced"
+        }
+    ]
+    return render_template('index.html', title='Home', user=user, posts=posts)

@@ -10,5 +10,8 @@
 </head>
 <body>
     <h1>Hello, {{user.nickname}}</h1>
+    {% for post in posts %}
+        <p>Author is : {{post.author}}, Subject is : {{post.subject}}, Level is :{{post.level}}</p>
+    {% endfor %}
 </body>
 </html>
