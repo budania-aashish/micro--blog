@@ -9,14 +9,16 @@ def index():
     # fake posts
     posts = [
         {
-            "author": "Aashish Budania",
+            "author": {"nickname": "Aashish Budania"},
             "subject": "Maths",
-            "level": "Primary"
+            "level": "Primary",
+            "body": "Consistency > Hard Work > Talent"
         },
         {
-            "author": "APJ abdul",
+            "author": {"nickname": "Abdul"},
             "subject": "Wings of fire",
-            "level": "Advanced"
+            "level": "Advanced",
+            "body": "To shine like a sun, first you have to burn like a sun"
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
